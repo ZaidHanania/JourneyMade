@@ -1,0 +1,132 @@
+.sidebar {
+	width: 33.33%;
+	float: right;
+	margin: 0;
+
+	.hero{
+		margin: 0;
+		background: url(images/hero.jpg) center no-repeat;
+		background-size: cover;
+		min-height: 1080px;
+		position: relative;
+
+		h1{
+			padding: 0;
+			position: relative;
+			margin: 0;
+			a{
+				background: url(images/logo-journeymade.svg) no-repeat center;
+				background-size: 300px;
+				height: 230px;
+				display: block;
+			}
+		}
+
+		p{
+			display: block;
+			position: absolute;
+			bottom: 0;
+			font-size: 16px;
+			left: 20px;
+			color: white;
+		}
+	}
+
+	h1 {
+		@include sidetext(26px);
+		margin: 0;
+	}
+
+	 p {
+		@include sidetext(16px, 200, white, 24px);
+	}
+	
+	img {
+		width:34px;
+		height: 34px;
+		margin: 7px;
+	}
+
+	.side1 {
+		@include side(#549f6b);
+	}
+
+	.side2 {
+		@include side(#4f8510);
+	}
+
+	.side3 {
+		@include side(#80a94e);
+	}
+
+	.side4 {
+		@include side(#4b8256);
+	}
+
+	.side5 {
+		@include side(#73ae80);
+	}
+
+	.side6 {
+		@include side(#e3e3e1);
+		h2 {
+			color: $grey2;
+		}
+
+		p {
+			@include sidetext(13px, 200, $grey, 18px);
+		}
+	}
+}
+
+	@media all and (max-width: 1115px){
+			.sidebar{ 
+				.hero {
+					h1 a{
+						background-size: 250px;
+					}
+				}
+			}
+		}
+
+	@media all and (max-width: 940px){
+			.sidebar{ 
+				.hero {
+					h1 a{
+						background-size: 200px;
+					}
+				}
+			}
+		}
+
+	@media all and (max-width: 800px){
+
+			.sidebar{ 
+				.hero {
+					h1 a{
+						background-size: 150px;
+					}				
+				}
+
+				h1{
+					font-size: 20px;
+				}
+				p {
+					font-size: 15px;
+				}
+			}
+		}
+
+	@media all and (max-width: 480px){
+
+			.sidebar {
+				float: left;
+				width: 100%;
+			
+			}
+
+			nav {
+				display: none;
+			}
+		}
+

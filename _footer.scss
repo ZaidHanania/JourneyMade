@@ -1,0 +1,104 @@
+
+footer {
+	.contact{
+		width: 66.66%;
+		background-color: white;
+		float: left;
+		padding-left: 5%;
+		h1 {
+			font-size: 44px;
+			line-height: 55px;
+			color: $black;
+			margin-bottom: 0;
+		}
+
+		a{
+			font-size: 26px;
+			margin: 0;
+			@include link;
+		}
+
+		h2{
+			color: $grey2;
+			margin-bottom: 30px;
+		}
+	}
+
+	.join{
+		width: 33.33%;
+		float: right;
+		margin: 0;
+		margin-top: 60px;
+		@include side(#e3e3e1);
+		padding-top: 0;
+		img {
+			padding: 0;
+			margin: 0;
+			max-width: 80px;
+		}
+		a{
+			@include link;
+			color: $black;
+			&:hover {
+				color: $navgreen;
+			}
+		}
+	}
+}
+
+	@media all and (max-width: 800px) { 
+		footer{ 
+			.contact{ 
+				h1 {
+					font-size: 38px;
+				}
+
+				h2 {
+					font-size: 28px;
+				}
+			}
+		}
+	}
+
+	@media all and (max-width: 670px) {
+		footer { 
+			.contact{ 
+				h1 {
+					font-size: 34px;
+				}
+
+				h2 {
+					font-size: 23px;
+				}
+			}
+		}
+	}
+
+
+	@media all and (max-width: 480px){
+			footer{
+
+
+				.contact {
+					width: 100%;
+					a {
+						font-size: 15px;
+					}
+					h1 {
+						margin-top: 30px;
+						font-size: 22px;
+						line-height: normal;
+					}
+					h2 {
+						font-size: 15px;
+					}
+				}
+
+				.join {
+					width: 100%;
+					float: left;
+				}
+
+			}
+
+		}

@@ -1,0 +1,273 @@
+.left {
+	width: 66.66%;
+	background-color: white;
+	float: left;
+	padding-top: 60px;
+	padding-left: 5%;
+	padding-right: 12%;
+	margin: 0;
+	nav ul {
+		
+		padding: 0;
+		margin: 0;
+		li {
+			display: inline;
+			margin-right: 30px;
+			a {
+				@include link;
+			}
+		}
+	}
+
+	.content {
+		a{
+			@include link;
+		}
+	}
+
+	.first {
+		margin-right: 1.2%;
+	}
+
+	.team {
+		display: block;
+		max-width: 49%;
+		float: left;
+		margin-bottom: 20px;
+		img{
+			max-width: 100%;
+			margin-bottom: 10px;
+		}
+		p{
+			font-size: 13px;
+			line-height: 18px;
+			color: $grey;
+		}
+	}
+
+	@media all and (max-width: 670px){
+		.team {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media all and (max-width: 800px){
+		.team {
+			max-width: 99%;
+			border-bottom: 1px solid $navgreen;
+			h4:last-of-type {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+
+	.teamsmall {
+		display: block;
+		max-width: 32.3%;
+		float: left;
+		margin-bottom: 20px;
+		margin-right: 1%;
+
+		&:first-of-type{
+			clear: both;
+		}
+
+		img{
+			max-width: 100%;
+			//margin-bottom: 10px;
+			position: relative;
+		}
+
+		h2 {
+			margin-top: 10px;
+			font-weight: 200;
+			font-size: 16px;
+			color: $grey2;
+		}
+
+		h3 {
+			font-size: 13px;
+			line-height: 18px;
+			color: $grey;
+		}
+
+		a{	
+			font-size: 13px;
+			line-height: 18px;
+			display: block;
+			@include link;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
+
+		@media all and (max-width: 800px){
+			.teamsmall {
+				max-width: 49%;
+			}
+		}
+
+
+	ol {
+		margin: 0;
+		padding: 0;
+		list-style-position: inside;
+		li{
+			color: $grey2;
+			font-size: 46px;
+			line-height: 32.5px;
+			padding: 20px 0;
+			border-bottom: 1px solid $listborder;
+			margin: 0;
+			&:first-of-type{
+				border-top: 1px solid $listborder;
+			}
+			span{
+				font-size: 26px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 460px) {
+	.left { 
+		ol {
+			li {
+			padding: 15px 0;
+			font-size: 28px; 
+			
+				span {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+.wrapper {
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	width: 100%;
+}
+
+.bioimg {
+	position: relative;
+	a {
+		transition: none;
+	}
+}
+
+.bioimg a.bio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 35%;
+	padding-left: 20%;
+	font-size: 26px;
+	font-weight: 200;
+	color: black;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.5);
+	opacity: 0;
+	&:hover {
+		color: black;
+		opacity: 1;
+	}
+}
+
+h1.list {
+	clear: both;
+	padding-right: 0;
+}
+
+@media all and (max-width: 460px) {
+	h1.list {
+		font-size: 22px;
+	}
+}
+
+form {
+
+	font-size: 26px;
+	width: 100%;
+	color: $formgrey;
+	label {
+		padding: 2px;
+	}
+
+	.form {
+		width: 100%;
+		margin-bottom: 20px;
+		border-bottom: 1px solid $listborder;
+	}
+	input {
+		padding-left: 10px;
+		display: inline-block;
+		outline: none;
+		border: none;
+		}
+
+	input[type="submit"] {
+		color: white;
+		margin-top: 20px;
+		padding: 10px 20px;
+		background-color: $navgreen;
+	}
+
+	textarea {
+		border: 1px solid $listborder;
+		width: 100%;
+		max-width: 100%;
+		min-height: 300px;
+		outline: none;
+		box-shadow: none;
+	}
+	.description {
+		border: none;
+	}
+
+	margin-bottom: 20px;
+}
+
+.clicked{
+	border-color: $navgreen;
+	color: $navgreen;
+}
+
+	@media all and (max-width: 1115px) {
+		.left {
+			padding-right: 5%;
+		}
+	}
+
+	@media all and (max-width: 670px) {
+		form{
+			font-size: 20px;
+		}
+	}
+
+	@media all and (max-width: 480px) {
+			.left {
+				width: 100%;
+				padding-top: 0px;
+			}
+
+			.hero {
+				display: none;
+			}
+
+			.responsivehero {
+				display: block;
+				min-width: 100%;
+				min-height: 300px;
+				background : url(images/hero.jpg) center no-repeat;
+			}
+
+			form{
+				font-size: 16px;
+			}
+		}
